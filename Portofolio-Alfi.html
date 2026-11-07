@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfiatu Zainil Ngaliah | Portfolio</title>
+
+    <style>
+        :root {
+            --navy: #101d36;
+            --blue: #5276c7;
+            --paper: #f6f8fc;
+            --ink: #202a3b;
+            --muted: #68758a;
+            --line: #e5eaf3;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.7;
+        }
+
+        .wrap {
+            width: min(1050px, 90%);
+            margin: auto;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: #fffffff2;
+            border-bottom: 1px solid var(--line);
+            z-index: 3;
+        }
+
+        nav {
+            min-height: 68px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .brand {
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #536078;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(
+                120deg,
+                #101d36,
+                #29477d 70%,
+                #5276c7
+            );
+            color: white;
+            padding: 95px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 220px;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b9ccff;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.05;
+            margin: 15px 0;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: var(--navy);
+            margin: 8px 0 20px;
+        }
+
+        h3 {
+            color: var(--navy);
+            margin: 8px 0;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #e3eaff;
+            font-size: 18px;
+        }
+
+        .monogram {
+            width: 185px;
+            height: 185px;
+            border: 1px solid #ffffff88;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 52px;
+            font-weight: bold;
+            background: #ffffff12;
+        }
+
+        .pill, .tag {
+            display: inline-block;
+            border-radius: 30px;
+            padding: 7px 13px;
+            background: #eaf0ff;
+            color: #34518e;
+            font-size: 13px;
+            font-weight: bold;
+            margin: 4px;
+        }
+
+        .section {
+            padding: 72px 0;
+        }
+
+        .white {
+            background: white;
+        }
+
+        .kicker {
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: var(--blue);
+            font-weight: bold;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .card, .info {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 17px;
+            padding: 24px;
+            box-shadow: 0 8px 28px #172b4d08;
+        }
+
+        .info {
+            background: var(--paper);
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 30px;
+        }
+
+        .status {
+            display: inline-block;
+            background: #fff1d9;
+            color: #805612;
+            border-radius: 30px;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .contact {
+            background: var(--navy);
+            color: white;
+            border-radius: 22px;
+            padding: 35px;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            color: #dce6fb;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 8px 8px 0 0;
+            padding: 10px 16px;
+            border-radius: 9px;
+            background: white;
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .outline {
+            background: transparent;
+            color: white;
+            border: 1px solid #ffffff88;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* Tampilan HP */
+        @media (max-width: 720px) {
+            nav {
+                padding: 14px 0;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .hero-grid, .about {
+                grid-template-columns: 1fr;
+            }
+
+            .monogram {
+                width: 125px;
+                height: 125px;
+                font-size: 36px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 52px 0;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="wrap">
+            <a class="brand" href="#home">AZN</a>
+
+            <div class="links">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="wrap hero-grid">
+
+                <div>
+                    <div class="eyebrow">
+                        Personal Digital Portfolio
+                    </div>
+
+                    <h1>
+                        Alfiatu Zainil<br>
+                        Ngaliah
+                    </h1>
+
+                    <p>
+                        Mahasiswa S1 Teknik Informatika yang tertarik
+                        pada teknologi informasi, pengembangan sistem,
+                        pengolahan data, dan desain UI/UX.
+                    </p>
+
+                    <span class="pill">
+                        Informatics Engineering Student · Learning & Growing
+                    </span>
+                </div>
+
+                <div class="monogram">
+                    AZN
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT ME -->
+        <section class="section white" id="about">
+            <div class="wrap">
+
+                <div class="kicker">01 / ABOUT ME</div>
+                <h2>Mengenal Saya</h2>
+
+                <div class="about">
+
+                    <p class="muted">
+                        Halo! Saya Alfiatu Zainil Ngaliah, mahasiswa
+                        S1 Teknik Informatika di Universitas Ma’arif
+                        Nahdlatul Ulama Kebumen.
+
+                        Saya memiliki ketertarikan pada dunia teknologi,
+                        khususnya pengembangan sistem informasi,
+                        pengolahan data, pemrograman, dan desain UI/UX.
+
+                        Saat ini saya terus mengembangkan kemampuan
+                        melalui pembelajaran di perkuliahan, latihan,
+                        dan pengerjaan tugas teknologi.
+
+                        Saya percaya bahwa setiap proses belajar
+                        merupakan langkah untuk menjadi lebih baik.
+                    </p>
+
+                    <div class="info">
+                        <b>Fokus pembelajaran</b>
+
+                        <p class="muted">
+                            Dasar pemrograman · Pengolahan data ·
+                            Data mining · Algoritma · UI/UX ·
+                            Sistem informasi
+                        </p>
+
+                        <b>Prinsip belajar</b>
+
+                        <p class="muted">
+                            Terbuka terhadap masukan, bertanggung jawab,
+                            dan terus mencoba hal baru.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="section" id="education">
+            <div class="wrap">
+
+                <div class="kicker">02 / EDUCATION</div>
+                <h2>Pendidikan</h2>
+
+                <div class="card">
+
+                    <div class="kicker">
+                        2024 – SEKARANG
+                    </div>
+
+                    <h3>
+                        Universitas Ma’arif Nahdlatul Ulama Kebumen
+                    </h3>
+
+                    <b>S1 Teknik Informatika</b>
+
+                    <p class="muted">
+                        Mempelajari pemrograman, algoritma,
+                        sistem informasi, pengolahan data,
+                        dan desain antarmuka.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section white" id="skills">
+            <div class="wrap">
+
+                <div class="kicker">03 / SKILLS</div>
+                <h2>Kompetensi</h2>
+
+                <p class="muted">
+                    Kemampuan yang telah dipelajari dan
+                    terus dikembangkan.
+                </p>
+
+                <div class="grid">
+
+                    <div class="card">
+                        <h3>Technical Skills</h3>
+
+                        <span class="tag">Microsoft Office</span>
+                        <span class="tag">Python Dasar</span>
+                        <span class="tag">Data Processing</span>
+                        <span class="tag">Data Mining Dasar</span>
+                        <span class="tag">UI/UX Dasar</span>
+                        <span class="tag">Algoritma Dasar</span>
+                    </div>
+
+                    <div class="card">
+                        <h3>Personal Skills</h3>
+
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Teamwork</span>
+                        <span class="tag">Communication</span>
+                        <span class="tag">Time Management</span>
+                        <span class="tag">Willingness to Learn</span>
+                    </div>
+
+                    <div class="card">
+                        <h3>Areas of Interest</h3>
+
+                        <span class="tag">Information Systems</span>
+                        <span class="tag">Technology</span>
+                        <span class="tag">Data</span>
+                        <span class="tag">UI/UX Design</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="wrap">
+
+                <div class="kicker">04 / LEARNING & PROJECTS</div>
+                <h2>Proses Belajar dan Karya</h2>
+
+                <p class="muted">
+                    Topik dan rancangan yang menjadi bagian
+                    dari perjalanan belajar saya.
+                </p>
+
+                <div class="grid">
+
+                    <div class="card">
+                        <h3>Latihan Pemrograman</h3>
+
+                        <p class="muted">
+                            Latihan dasar Python dan penerapan
+                            algoritma seperti Sequential Search
+                            dan Selection Sort dalam tugas perkuliahan.
+                        </p>
+
+                        <span class="status">Pembelajaran</span>
+                    </div>
+
+                    <div class="card">
+                        <h3>Pengolahan & Data Mining</h3>
+
+                        <p class="muted">
+                            Mempelajari pengolahan data, pembersihan
+                            dataset, serta pengenalan klasifikasi
+                            menggunakan aplikasi Orange.
+                        </p>
+
+                        <span class="status">Pembelajaran</span>
+                    </div>
+
+                    <div class="card">
+                        <h3>PondokPay</h3>
+
+                        <p class="muted">
+                            Rancangan ide sistem informasi berbasis
+                            web untuk membantu pengurus pondok
+                            mengelola tagihan, pembayaran,
+                            dan tunggakan santri.
+                        </p>
+
+                        <span class="status">
+                            Ide / Rancangan — belum dikembangkan
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section white" id="contact">
+            <div class="wrap">
+
+                <div class="contact">
+
+                    <div class="kicker">05 / CONTACT</div>
+
+                    <h2>Mari Terhubung</h2>
+
+                    <p>
+                        Terbuka untuk belajar, berbagi pengetahuan,
+                        dan membangun koneksi di bidang teknologi.
+                    </p>
+
+                    <a class="btn"
+                       href="mailto:alfiatuzainil211206@gmail.com">
+                        Email
+                    </a>
+
+                    <a class="btn outline"
+                       href="https://www.linkedin.com/in/alfiatu-zainil-ngaliah-279a87448/"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a class="btn outline"
+                       href="https://github.com/alfizain21"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Alfiatu Zainil Ngaliah · Personal Digital Portfolio
+    </footer>
+
+</body>
+</html>
